@@ -54,6 +54,7 @@ Pizza.prototype.orderSuminator = function () {
 $(document).ready(function () {
   $('#submit-order-button').click(function (event) {
     event.preventDefault();
+
     // OBTAIN AND UPDATE PIZZA INSTANCE SIZE
     const sizeSelection = $('input:radio[name=size]:checked').val();
     if (!sizeSelection) {
@@ -62,6 +63,7 @@ $(document).ready(function () {
       orderOne.addSizeToOrder(sizeSelection);
       console.log('orderOne after user selects medium size option: ', orderOne);
     }
+
     // OBTAIN AND UPDATE PIZZA INSTANCE TOPPINGS
     let selectedTopping;
     let selectedToppingsArray = [];
@@ -71,5 +73,9 @@ $(document).ready(function () {
     });
     orderOne.addToppingsToOrder.apply(orderOne, selectedToppingsArray);
     console.log('orderOne after user selects one or more toppings: ', orderOne);
+
+    //UPDATE PIZZA INSTANCE ORDERSUM
+    orderOne.orderSuminator();
+    console.log('orderOne after calling orderSuminator(): ', orderOne);
   });
 });
