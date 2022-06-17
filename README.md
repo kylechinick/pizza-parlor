@@ -29,4 +29,12 @@ Demo website for an imaginary pizza parlor. Allows users to order items and view
 
 ## Specs
 
-...
+Describe: `Pizza()`
+
+#### Test #1
+
+- Test: "It should return a new instance of the Pizza object with properties for size and toppings"
+- Code: \
+  `const orderOne = new Pizza();`
+- Expected Output:\
+  `Pizza { "size": "", "toppings": [] }`
