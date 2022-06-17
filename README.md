@@ -14,7 +14,7 @@ Demo website for an imaginary pizza parlor. Allows users to order items and view
 
 ## Description
 
-...
+This demo provides users a pizza ordering web app. Users can view sizes and toppings, select their choices from each, add those choices to a pizza order and, finally, view the total cost of their custom-made pizza.
 
 ## Setup/Installation
 
@@ -25,11 +25,11 @@ Demo website for an imaginary pizza parlor. Allows users to order items and view
 
 ## Known bugs
 
-...
+None (that have been discovered so far...)
 
 ## Specs
 
-Describe: `Pizza()`
+### Describe: `Pizza()`
 
 #### Test #1
 
@@ -38,3 +38,13 @@ Describe: `Pizza()`
   `const orderOne = new Pizza();`
 - Expected Output:\
   `Pizza { "size": "", "toppings": [] }`
+
+### Describe: `addSizeToOrder(selectedSize)`
+
+#### Test #1
+
+- Test: "It should take the argument and add it as the value for the pizza object receiver's size property"
+- Code: \
+  `orderOne.addSizeToOrder("medium");`
+- Expected Output:\
+  `Pizza { "size": "medium", "toppings": [] }`
