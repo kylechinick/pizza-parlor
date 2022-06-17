@@ -79,7 +79,6 @@ $(document).ready(function () {
     });
 
     //UPDATE PIZZA INSTANCE ORDERSUM
-
     orderOne.orderSuminator();
     console.log('orderOne after calling orderSuminator(): ', orderOne);
 
