@@ -21,6 +21,57 @@
     <title>Pizza Parlor</title>
   </head>
   <body>
-    <h1>The Cowabunga Pizza Parlor</h1>
+    <header>
+      <p>The Cowabunga Pizza Parlor</p>
+    </header>
+    <main>
+      <h1>Pizza Builder</h1>
+      <form>
+        <h2>Select a Pizza Size</h2>
+        <label for="size">
+          <input type="radio" name="size" id="size-small" value="small" />
+          Small
+        </label>
+        <label for="size">
+          <input type="radio" name="size" id="size-medium" value="medium" />
+          Medium
+        </label>
+        <label for="size">
+          <input type="radio" name="size" id="size-large" value="large" />
+          Large
+        </label>
+
+        <h2>Select One or More Pizza Toppings</h2>
+        <label for="topping">
+          <input
+            type="checkbox"
+            name="topping"
+            id="topping-pepperoni"
+            value="pepperoni"
+          />
+          Pepperoni
+        </label>
+        <label for="topping">
+          <input
+            type="checkbox"
+            name="topping"
+            id="topping-extra-cheese"
+            value="extra-cheese"
+          />
+          Extra Cheese
+        </label>
+        <label for="topping">
+          <input
+            type="checkbox"
+            name="topping"
+            id="topping-mixed-veggies"
+            value="mixed-veggies"
+          />
+          Mixed Veggies
+        </label>
+
+        <button id="submit-order-button" type="submit">Submit Order</button>
+      </form>
+    </main>
   </body>
 </html>

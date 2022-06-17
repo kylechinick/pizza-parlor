@@ -13,18 +13,18 @@ Pizza.prototype.addSizeToOrder = function (selectedSize) {
   return (this.size = selectedSize);
 };
 
-orderOne.addSizeToOrder('medium');
-console.log('orderOne after calling addSizeToOrder("medium"): ', orderOne);
+// orderOne.addSizeToOrder('medium');
+// console.log('orderOne after calling addSizeToOrder("medium"): ', orderOne);
 
 Pizza.prototype.addToppingsToOrder = function (...selectedToppings) {
   return (this.toppings = selectedToppings);
 };
 
-orderOne.addToppingsToOrder('pepperoni', 'extra cheese', 'mixed veggies');
-console.log(
-  'orderOne after calling addToppingsToOrder("pepperoni"): ',
-  orderOne
-);
+// orderOne.addToppingsToOrder('pepperoni', 'extra cheese', 'mixed veggies');
+// console.log(
+//   'orderOne after calling addToppingsToOrder("pepperoni"): ',
+//   orderOne
+// );
 
 Pizza.prototype.orderSuminator = function () {
   const pizzaOrder = this;
@@ -60,8 +60,29 @@ Pizza.prototype.orderSuminator = function () {
   });
 };
 
-orderOne.orderSuminator();
-console.log('orderOne after calling orderSuminator: ', orderOne);
+// orderOne.orderSuminator();
+// console.log('orderOne after calling orderSuminator: ', orderOne);
+
+$(document).ready(function () {
+  $('#submit-order-button').click(function (event) {
+    event.preventDefault();
+    const sizeSelection = $('input:radio[name=size]:checked').val();
+    if (!sizeSelection) {
+      alert('Please select a pizza size in order to complete your order');
+    } else {
+      orderOne.addSizeToOrder(sizeSelection);
+      console.log('orderOne after user selects medium size option: ', orderOne);
+    }
+    let selectedTopping;
+    let selectedToppingsArray = [];
+    $('input:checkbox[name=topping]:checked').each(function () {
+      selectedTopping = $(this).val();
+      selectedToppingsArray.push(selectedTopping);
+    });
+
+    console.log(selectedToppingsArray);
+  });
+});
 
 // ROAD MAP
 // Primary function of app: user can build a pizza and see total cost
@@ -90,7 +111,7 @@ console.log('orderOne after calling orderSuminator: ', orderOne);
 // Ordering / Cost Logic
 // After user submitted selections are added to the Pizza object JS should:
 // -- Access the order's size property
-// -- -- ! NEW PROPERTY NEEDED: orderSum
+// -- -- COMPLETED ! NEW PROPERTY NEEDED: orderSum
 // -- -- Run the size value through a switch statement that updates the orderSum property by the amount stated in the matching case clause
 // -- Access the order's toppings property
 // -- -- Loop through each element in the toppings value array and run each element through the price-checking switch statement, updating the the orderSum property by the amount stated in the matching case clause for each element
