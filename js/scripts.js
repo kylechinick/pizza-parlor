@@ -18,30 +18,30 @@ Pizza.prototype.addToppingsToOrder = function (...selectedToppings) {
 };
 
 Pizza.prototype.orderSuminator = function () {
-  const pizzaOrder = this;
-  switch (this.size) {
+  // const pizzaOrder = this;
+  switch (orderOne.size) {
     case 'small':
-      this.orderSum += 3;
+      orderOne.orderSum += 3;
       break;
     case 'medium':
-      this.orderSum += 4;
+      orderOne.orderSum += 4;
       break;
     case 'large':
-      this.orderSum += 5;
+      orderOne.orderSum += 5;
       break;
     default:
       console.log('The default size clause ran, good luck debugging this');
   }
-  pizzaOrder.toppings.forEach(function (element) {
+  orderOne.toppings.forEach(function (element) {
     switch (element) {
       case 'pepperoni':
-        pizzaOrder.orderSum += 2;
+        orderOne.orderSum += 2;
         break;
-      case 'extra cheese':
-        pizzaOrder.orderSum += 2;
+      case 'extra-cheese':
+        orderOne.orderSum += 2;
         break;
-      case 'mixed veggies':
-        pizzaOrder.orderSum += 2;
+      case 'mixed-veggies':
+        orderOne.orderSum += 2;
         break;
       default:
         console.log(
@@ -65,16 +65,21 @@ $(document).ready(function () {
     }
 
     // OBTAIN AND UPDATE PIZZA INSTANCE TOPPINGS
+    console.log('Line 68 reached');
     let selectedTopping;
     let selectedToppingsArray = [];
     $('input:checkbox[name=topping]:checked').each(function () {
+      console.log('keyword "this" inside of checkbox.each(): ', this);
       selectedTopping = $(this).val();
-      selectedToppingsArray.push(selectedTopping);
+      orderOne.toppings.push(selectedTopping);
+      console.log(
+        'orderOne after user selects one or more toppings: ',
+        orderOne
+      );
     });
-    orderOne.addToppingsToOrder.apply(orderOne, selectedToppingsArray);
-    console.log('orderOne after user selects one or more toppings: ', orderOne);
 
     //UPDATE PIZZA INSTANCE ORDERSUM
+
     orderOne.orderSuminator();
     console.log('orderOne after calling orderSuminator(): ', orderOne);
 
@@ -84,5 +89,12 @@ $(document).ready(function () {
       orderOne.toppings.toString().replace(/,/g, ', ')
     );
     $('#order-sum-showcase').text(orderOne.orderSum);
+
+    // CLEAR INPUTS AND RESET PIZZA INSTANCE
+    $('input[name=size]').prop('checked', false);
+    $('input[name=topping]').prop('checked', false);
+    orderOne.size = '';
+    orderOne.toppings = [];
+    orderOne.orderSum = 0;
   });
 });
