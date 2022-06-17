@@ -14,11 +14,11 @@ Demo website for an imaginary pizza parlor. Allows users to order items and view
 
 ## Description
 
-This demo provides users a pizza ordering web app. Users can view sizes and toppings, select their choices from each, add those choices to a pizza order and, finally, view the total cost of their custom-made pizza.
+This demo provides users a pizza ordering web app. Users can view sizes and toppings, select their choices for each, add those choices to a pizza order and, finally, view the total cost of their custom-made pizza.
 
 ## Setup/Installation
 
-1. Clone this repository to your desktop by executing `git clone https://github.com/kylechinick/programming-language-quiz.git` in your preferred terminal application.
+1. Clone this repository to your desktop by executing `git clone https://github.com/kylechinick/pizza-parlor.git` in your preferred terminal application.
 2. Execute `git remote -v` in the terminal to view existing remotes and verify successful cloning to your local machine.
 3. Navigate to the top level of the project directory.
 4. Open the index.html file in your browser.
