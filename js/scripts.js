@@ -15,11 +15,11 @@ Pizza.prototype.addSizeToOrder = function (selectedSize) {
 orderOne.addSizeToOrder('medium');
 console.log('orderOne after calling addSizeToOrder("medium"): ', orderOne);
 
-Pizza.prototype.addToppingsToOrder = function (selectedToppings) {
+Pizza.prototype.addToppingsToOrder = function (...selectedToppings) {
   return (this.toppings = selectedToppings);
 };
 
-orderOne.addToppingsToOrder('pepperoni');
+orderOne.addToppingsToOrder('pepperoni', 'extra cheese', 'mixed veggies');
 console.log(
   'orderOne after calling addToppingsToOrder("pepperoni"): ',
   orderOne

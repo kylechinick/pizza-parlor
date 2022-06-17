@@ -49,7 +49,7 @@ None (that have been discovered so far...)
 - Expected Output:\
   `Pizza { "size": "medium", "toppings": [] }`
 
-### Describe: `addToppingsToOrder(selectedToppings)`
+### Describe: `addToppingsToOrder(...selectedToppings)`
 
 #### Test #1
 
@@ -58,3 +58,11 @@ None (that have been discovered so far...)
   `orderOne.addToppingsToOrder("pepperoni");`
 - Expected Output:\
   `Pizza { "size": "medium", "toppings": ["pepperoni"] }`
+
+#### Test #2
+
+- Test: "It should take the arguments and add each as an individual element in the array value for the pizza-object-receiver's toppings property"
+- Code: \
+  `orderOne.addToppingsToOrder('pepperoni', 'extra cheese', 'mixed veggies');`
+- Expected Output:\
+  `Pizza { "size": "medium", "toppings": ["pepperoni", "extra cheese", "mixed veggies"] }`
