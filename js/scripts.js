@@ -80,7 +80,8 @@ $(document).ready(function () {
       selectedToppingsArray.push(selectedTopping);
     });
 
-    console.log(selectedToppingsArray);
+    orderOne.addToppingsToOrder.apply(orderOne, selectedToppingsArray);
+    console.log('orderOne after user selects one or more toppings: ', orderOne);
   });
 });
 
@@ -123,3 +124,5 @@ $(document).ready(function () {
 // - Make/use a prototype
 // - Include tests for all business logic (commit after each successful test)
 // - Complete README
+
+// ? WHAT HAPPENS TO ORDER AND SUMINATOR IF NO TOPPINGS ARE SELECTED?
