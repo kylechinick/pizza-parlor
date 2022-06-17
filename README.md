@@ -76,3 +76,11 @@ None (that have been discovered so far...)
   `orderOne.orderSuminator();`
 - Expected Output:\
    `Pizza { "size": "medium", "toppings": [ "pepperoni", "extra cheese", "mixed veggies" ], "orderSum": 4 }`
+
+#### Test #2
+
+- Test: "It should take the value of the first element in the pizza-object-receiver's toppings property array and use it as the expression value in a switch statement that adds the value contained in the matching case clause to the orderSum property"
+- Code: \
+  `orderOne.orderSuminator();`
+- Expected Output:\
+   `Pizza { "size": "medium", "toppings": [ "pepperoni", "extra cheese", "mixed veggies" ], "orderSum": 6 }`
