@@ -31,8 +31,18 @@ Pizza.prototype.orderSuminator = function () {
     case 'medium':
       this.orderSum += 4;
       break;
+    case 'pepperoni':
+      this.orderSum += 2;
+      break;
     default:
-      console.log('The default clause ran, good luck debugging this');
+      console.log('The default size clause ran, good luck debugging this');
+  }
+  switch (this.toppings[0]) {
+    case 'pepperoni':
+      this.orderSum += 2;
+      break;
+    default:
+      console.log('The default toppings clause ran, good luck debugging this');
   }
 };
 
