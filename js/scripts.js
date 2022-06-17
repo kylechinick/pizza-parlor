@@ -27,23 +27,37 @@ console.log(
 );
 
 Pizza.prototype.orderSuminator = function () {
+  const pizzaOrder = this;
   switch (this.size) {
+    case 'small':
+      this.orderSum += 3;
+      break;
     case 'medium':
       this.orderSum += 4;
       break;
-    case 'pepperoni':
-      this.orderSum += 2;
+    case 'large':
+      this.orderSum += 5;
       break;
     default:
       console.log('The default size clause ran, good luck debugging this');
   }
-  switch (this.toppings[0]) {
-    case 'pepperoni':
-      this.orderSum += 2;
-      break;
-    default:
-      console.log('The default toppings clause ran, good luck debugging this');
-  }
+  pizzaOrder.toppings.forEach(function (element) {
+    switch (element) {
+      case 'pepperoni':
+        pizzaOrder.orderSum += 2;
+        break;
+      case 'extra cheese':
+        pizzaOrder.orderSum += 2;
+        break;
+      case 'mixed veggies':
+        pizzaOrder.orderSum += 2;
+        break;
+      default:
+        console.log(
+          'The default toppings clause ran, good luck debugging this'
+        );
+    }
+  });
 };
 
 orderOne.orderSuminator();
