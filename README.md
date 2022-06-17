@@ -43,8 +43,18 @@ None (that have been discovered so far...)
 
 #### Test #1
 
-- Test: "It should take the argument and add it as the value for the pizza object receiver's size property"
+- Test: "It should take the argument and add it as the value for the pizza-object-receiver's size property"
 - Code: \
   `orderOne.addSizeToOrder("medium");`
 - Expected Output:\
   `Pizza { "size": "medium", "toppings": [] }`
+
+### Describe: `addToppingsToOrder(selectedToppings)`
+
+#### Test #1
+
+- Test: "It should take the argument and add it as an element in the array value for the pizza-object-receiver's toppings property"
+- Code: \
+  `orderOne.addToppingsToOrder("pepperoni");`
+- Expected Output:\
+  `Pizza { "size": "medium", "toppings": ["pepperoni"] }`

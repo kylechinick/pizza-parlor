@@ -1,5 +1,3 @@
-console.log('Connection test');
-
 // BUSINESS LOGIC
 
 function Pizza() {
@@ -16,6 +14,16 @@ Pizza.prototype.addSizeToOrder = function (selectedSize) {
 
 orderOne.addSizeToOrder('medium');
 console.log('orderOne after calling addSizeToOrder("medium"): ', orderOne);
+
+Pizza.prototype.addToppingsToOrder = function (selectedToppings) {
+  return (this.toppings = selectedToppings);
+};
+
+orderOne.addToppingsToOrder('pepperoni');
+console.log(
+  'orderOne after calling addToppingsToOrder("pepperoni"): ',
+  orderOne
+);
 
 // ROAD MAP
 // Primary function of app: user can build a pizza and see total cost
