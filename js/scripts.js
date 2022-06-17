@@ -77,5 +77,12 @@ $(document).ready(function () {
     //UPDATE PIZZA INSTANCE ORDERSUM
     orderOne.orderSuminator();
     console.log('orderOne after calling orderSuminator(): ', orderOne);
+
+    // SHOW SIZE SELECTION, TOPPINGS SELECTION(S), AND TOTAL COST
+    $('#size-confirmation-showcase').text(orderOne.size);
+    $('#toppings-confirmation-showcase').text(
+      orderOne.toppings.toString().replace(/,/g, ', ')
+    );
+    $('#order-sum-showcase').text(orderOne.orderSum);
   });
 });
