@@ -21,11 +21,12 @@
     <title>Pizza Parlor</title>
   </head>
   <body>
-    <header>
-      <p>The Cowabunga Pizza Parlor</p>
+    <header class="flex-center-horizontal">
+      <p class="wordmark-logo logo-italics">The Cowabunga</p>
+      <p class="wordmark-logo">Pizza Parlor</p>
     </header>
     <main>
-      <h1>Pizza Builder</h1>
+      <h1 class="shelltastic-font">Pizza Builder</h1>
       <form class="flex-center-horizontal">
         <div class="flex-center-horizontal">
           <div class="flex-center-horizontal flex-column">
@@ -87,11 +88,20 @@
       </form>
       <div id="order-showcase-container">
         <h2>Order Confirmations</h2>
-        <p>Size:</p>
-        <span id="size-confirmation-showcase"></span>
-        <p>Topping<span id="toppings-s-character">s</span>:</p>
-        <span id="toppings-confirmation-showcase"></span>
-        <p>Order Total: $<span id="order-sum-showcase"></span></p>
+        <div>
+          <p class="final-order-subtitle">Size:</p>
+          <span id="size-confirmation-showcase"></span>
+        </div>
+        <div>
+          <p class="final-order-subtitle">
+            Topping<span id="toppings-s-character">s</span>:
+          </p>
+          <span id="toppings-confirmation-showcase"></span>
+        </div>
+        <div>
+          <p class="final-order-subtitle">Order Total: $</p>
+          <span id="order-sum-showcase">00.00</span>
+        </div>
       </div>
     </main>
   </body>

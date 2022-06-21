@@ -1,12 +1,15 @@
 * {
-  /* border: 1px solid red; */
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
 }
 
-#order-showcase-container {
-  text-transform: capitalize;
+.shelltastic-font {
+  font-family: 'Sigmar One', cursive;
+  color: rgb(123, 188, 57);
+  -webkit-text-stroke: 2px #333;
 }
 
 .flex-center-horizontal {
@@ -15,13 +18,43 @@
   margin: 1rem;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
+body {
+  background-color: rgb(80, 145, 41);
+}
+
+header {
+  margin: auto;
+  padding: 1rem;
+  border: 4px solid #333;
+  background-color: rgb(220, 48, 33);
+}
+
+.wordmark-logo {
+  display: inline-block;
+  margin: 4px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-style: italic;
+  color: rgb(239, 240, 235);
+}
+
+.logo-italics {
+  transform: skew(24deg, 0deg);
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
 form {
   flex-direction: column;
   align-items: center;
-}
-
-.flex-column {
-  flex-direction: column;
 }
 
 label {
@@ -29,9 +62,20 @@ label {
 }
 
 #submit-order-button {
-  width: 8rem;
-  height: 4rem;
+  cursor: pointer;
   padding: 1rem;
-  border: 2px solid green;
+  font-size: 1rem;
+  background-color: rgb(238, 186, 104);
+  border: 4px solid rgb(159, 99, 58);
   border-radius: 6px;
+}
+
+#order-showcase-container {
+  text-transform: capitalize;
+  padding: 1rem;
+}
+
+.final-order-subtitle {
+  display: inline-block;
+  font-weight: 900;
 }
